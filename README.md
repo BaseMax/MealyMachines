@@ -26,6 +26,20 @@ $inputs = "100-50-25";
 echo mealy_minus($inputs) . PHP_EOL; // 25
 ```
 
+To use the mealy_binary_sum implementation:
+
+```php
+$inputs = "1110 + 1011";
+echo mealy_binary_sum($inputs) . PHP_EOL; // 1001
+```
+
+To use the mealy_binary_minus implementation:
+
+```php
+$inputs = "1110 - 1011";
+echo mealy_binary_minus($inputs) . PHP_EOL; // 0011
+```
+
 ## Contributing
 
 If you'd like to contribute to this repository, feel free to submit a pull request with your changes. Please make sure to follow the existing code style and document any new functionality clearly in the code and in the README.
