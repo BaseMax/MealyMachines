@@ -2,16 +2,32 @@
 function mealy_minus($inputs) {
     $state = "start";
     $diff = 0;
+    $first = true;
+    $num_buffer = '';
     foreach (str_split($inputs) as $i) {
         if ($state == "start") {
             if ($i == "-") {
                 $state = "subtract";
             } else {
-                $diff = $diff * 10 + intval($i);
+                $num_buffer .= $i;
             }
         } elseif ($state == "subtract") {
-            $diff -= intval($i);
+            if ($first) {
+                $diff = intval($num_buffer);
+                $first = false;
+            } else {
+                $diff -= intval($num_buffer);
+            }
+            $num_buffer = '';
             $state = "start";
+        }
+    }
+    if ($num_buffer !== '') {
+        if ($first) {
+            $diff = intval($num_buffer);
+            $first = false;
+        } else {
+            $diff -= intval($num_buffer);
         }
     }
     return $diff;
