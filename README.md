@@ -47,3 +47,5 @@ If you'd like to contribute to this repository, feel free to submit a pull reque
 ## License
 
 This project is licensed under the GPL-v3.0 License.
+
+Copyright 2023, Max Base
