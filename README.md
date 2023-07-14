@@ -21,6 +21,7 @@ echo mealy_sum($inputs) . PHP_EOL; // 66
 ```
 
 To use the mealy_minus implementation:
+
 ```php
 $inputs = "100-50-25";
 echo mealy_minus($inputs) . PHP_EOL; // 25
